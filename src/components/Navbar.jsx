@@ -9,7 +9,7 @@ const Navbar = () => {
       transition={{ delay: 1 }}
       className="fixed top-0 left-0 w-full px-6 py-6 flex justify-between items-center z-50 mix-blend-difference text-white"
     >
-      <span className="font-black text-2xl tracking-tighter">SP.</span>
+      <span className="font-black text-2xl tracking-tighter">2BYTE</span>
 
       <div className="hidden md:flex gap-8 font-medium text-sm">
         <a href="#work" className="hover:underline">WORK</a>

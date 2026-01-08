@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import Marquee from "../components/Marquee";
 import Hero from "../sections/Hero";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
@@ -17,7 +16,6 @@ const Portfolio = () => {
       <CustomCursor />
       <Navbar />
       <Hero />
-      <Marquee text="React • Spring Boot • Java • Docker •" />
       <About />
       <Projects />
       <Contact />

@@ -7,7 +7,6 @@ const Contact = () => {
       className="bg-white text-black py-32 px-6 md:px-12 rounded-t-[3rem] -mt-10 relative z-20"
     >
       <div className="max-w-7xl mx-auto text-center">
-        
         {/* Heading */}
         <h2 className="text-[10vw] font-black tracking-tighter uppercase leading-[0.8] mb-12">
           Let's Build
@@ -37,13 +36,12 @@ const Contact = () => {
 
         {/* Footer */}
         <div className="flex flex-col md:flex-row justify-between items-end border-t border-black pt-10 gap-8">
-          
           {/* Social Links */}
           <div className="text-left">
             <p className="font-bold text-xl mb-3">Socials</p>
             <div className="flex gap-5">
               <a
-                href="https://github.com/"
+                href="https://github.com/sahdevgithub403"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue-600 transition-colors"
@@ -52,7 +50,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://linkedin.com/"
+                href="www.linkedin.com/in/sahdev-puran403"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-blue-600 transition-colors"
@@ -61,7 +59,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="mailto:sahdevpuran192@gmail.com"
+                href="mailto:sahdeva403@gmail.com"
                 className="hover:text-blue-600 transition-colors"
               >
                 <Mail size={22} />

@@ -17,6 +17,7 @@ const CustomCursor = () => {
   return (
     <motion.div
       ref={cursorRef}
+      layout={false}   
       className="fixed top-0 left-0 w-8 h-8 bg-white mix-blend-difference rounded-full pointer-events-none z-50 hidden md:block"
       animate={{ x: position.x - 16, y: position.y - 16 }}
       transition={{ type: "spring", stiffness: 500, damping: 28 }}

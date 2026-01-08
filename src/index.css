@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+.robot-3d{
+    position: absolute;
+    top: 0;
+}
