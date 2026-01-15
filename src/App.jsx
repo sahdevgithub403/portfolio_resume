@@ -4,8 +4,8 @@ import {
   Mail,
   TerminalSquare,
   Zap,
-  Bomb,
-  Wrench,
+  Bomb,   // Re-added
+  Wrench, // Re-added
   Star,
   Quote,
 } from "lucide-react";
@@ -30,9 +30,7 @@ import {
 import {
   ToastSystem,
   BugSmasher,
-  ExcuseGenerator,
   RunawayButton,
-  UselessToggle,
   FAQItem,
 } from "./components/Widgets";
 import normalImage from "./assets/image1.png";
@@ -41,8 +39,7 @@ import winkImage from "./assets/image.png";
 const App = () => {
   const [score, setScore] = useState(0);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isBroken, setIsBroken] = useState(false);
-  const [showBSOD, setShowBSOD] = useState(false);
+  const [isBroken, setIsBroken] = useState(false); // Restored state
   const [hackerMode, setHackerMode] = useState(false);
   const [profileHover, setProfileHover] = useState(false);
 
@@ -54,17 +51,13 @@ const App = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
+  // Modified: No Blue Screen, directly breaks the site
   const triggerBroken = () => {
-    setShowBSOD(true);
-    setTimeout(() => {
-      setShowBSOD(false);
-      setIsBroken(true);
-    }, 2500);
+    setIsBroken(true);
   };
 
   const fixWebsite = () => {
     setIsBroken(false);
-    setShowBSOD(false);
     setScore((s) => s + 5);
   };
 
@@ -75,27 +68,9 @@ const App = () => {
       ${hackerMode ? "bg-black text-green-500" : "bg-yellow-50"}
     `}
     >
-      {/* BSOD OVERLAY */}
-      {showBSOD && (
-        <div className="fixed inset-0 z-[110] bg-blue-700 text-white font-mono p-8 md:p-24 flex flex-col justify-center animate-in fade-in duration-75 cursor-none">
-          <div className="text-6xl md:text-9xl mb-8">:(</div>
-          <h2 className="text-2xl md:text-4xl mb-8">
-            Your PC ran into a problem and needs to restart.
-          </h2>
-          <p className="text-xl mb-4">
-            We're just collecting some error info, and then we'll restart for
-            you.
-          </p>
-          <p className="text-xl">0% complete</p>
-          <div className="mt-12 p-4 bg-white text-blue-700 w-fit font-bold">
-            STOP_CODE: USER_CLICKED_DO_NOT_CLICK
-          </div>
-        </div>
-      )}
-
-      {/* Broken Overlay */}
-      {isBroken && !showBSOD && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 backdrop-blur-sm animate-in fade-in duration-500">
+      {/* Broken Overlay (Red Box) - Restored */}
+      {isBroken && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm animate-in fade-in duration-500">
           <div className="bg-white p-8 border-8 border-red-500 shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] max-w-lg text-center transform -rotate-3">
             <h1 className="text-6xl mb-4">🤦‍♂️</h1>
             <h2 className="text-3xl font-black mb-4 uppercase text-red-600">
@@ -116,7 +91,7 @@ const App = () => {
       )}
 
       {/* Ghost Cursor */}
-      {!hackerMode && !isBroken && !showBSOD && (
+      {!hackerMode && !isBroken && (
         <div
           className="fixed pointer-events-none z-40 text-4xl hidden md:block transition-all duration-100 ease-linear"
           style={{ left: `${mousePos.x + 10}px`, top: `${mousePos.y + 10}px` }}
@@ -126,7 +101,7 @@ const App = () => {
       )}
 
       <BugSmasher score={score} setScore={setScore} />
-      {!isBroken && !showBSOD && <ToastSystem />}
+      {!isBroken && <ToastSystem />}
 
       {/* Scoreboard */}
       <div
@@ -187,7 +162,7 @@ const App = () => {
         </div>
       </nav>
 
-      {!isBroken && !showBSOD && (
+      {!isBroken && (
         <Marquee text="HIRE ME BEFORE AI TAKES MY JOB" />
       )}
 
@@ -246,6 +221,8 @@ const App = () => {
                   >
                     Hire Me! <Zap size={18} />
                   </BrutalButton>
+                  
+                  {/* DO NOT CLICK BUTTON RESTORED */}
                   <BrutalButton
                     color={hackerMode ? "bg-red-900" : "bg-red-200"}
                     onClick={triggerBroken}
@@ -274,7 +251,6 @@ const App = () => {
                     onMouseLeave={() => setProfileHover(false)}
                   >
                     <img
-                      // src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${portfolioData.name}&backgroundColor=transparent&clothing=hoodie&eyes=${profileHover ? 'happy' : 'default'}&mouth=${profileHover ? 'smile' : 'default'}`}
                       src={profileHover ? winkImage : normalImage}
                       alt="Me"
                       className={`w-full h-full object-cover transition-transform duration-200 ${
@@ -287,7 +263,7 @@ const App = () => {
                       }}
                     />
 
-                    {/* HOVER REVEAL: CHIJ POSE */}
+                    {/* HOVER REVEAL */}
                     {profileHover && (
                       <>
                         <div className="absolute bottom-4 right-8 text-7xl animate-bounce drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] z-20">
@@ -441,7 +417,7 @@ const App = () => {
           {/* PHILOSOPHY SECTION */}
           <ScrollReveal>
             <section className="py-12 text-center">
-              <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-linear-to-r from-black to-gray-500 opacity-20 uppercase leading-none select-none">
+              <h2 className="text-6xl md:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-500 opacity-20 uppercase leading-none select-none">
                 CTRL+C <br /> CTRL+V
               </h2>
               <div className="relative -mt-16 z-10">
@@ -452,37 +428,6 @@ const App = () => {
                 <p className="text-2xl md:text-3xl font-black bg-yellow-300 inline-block px-4 py-2 border-4 border-black transform rotate-1 mt-4">
                   "It has unexpected features."
                 </p>
-              </div>
-            </section>
-          </ScrollReveal>
-
-          {/* FUN ZONE */}
-          <ScrollReveal>
-            <section className="py-8 bg-purple-100 border-4 border-black p-6 rounded-3xl relative overflow-hidden">
-              {/* Background Pattern */}
-              <div
-                className="absolute inset-0 opacity-10"
-                style={{
-                  backgroundImage: "radial-gradient(#000 1px, transparent 1px)",
-                  backgroundSize: "20px 20px",
-                }}
-              ></div>
-
-              <div className="flex items-center justify-center gap-2 mb-8 relative z-10">
-                <h2
-                  className={`text-2xl font-black px-4 border-2 transform rotate-2 ${
-                    hackerMode
-                      ? "bg-black text-green-500 border-green-500"
-                      : "bg-white text-black border-black"
-                  }`}
-                >
-                  DEBUGGING TOOLS
-                </h2>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8 items-start relative z-10">
-                <ExcuseGenerator />
-                <UselessToggle />
               </div>
             </section>
           </ScrollReveal>

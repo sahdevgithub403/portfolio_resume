@@ -1,11 +1,10 @@
-import { Coffee, Globe, Zap, Terminal, Cpu, Trophy } from "lucide-react";
+import { Coffee, Globe, Zap, Terminal, Cpu } from "lucide-react";
 
 export const portfolioData = {
   name: "Sahdev Puran",
   realTitle: "(Software Engineer)",
   bio: "I don't always test my code, but when I do, I do it in production. Entry-level dev skilled in turning coffee into syntax errors.",
-  about:
-    "I'm a B.Tech student (2022-2026) at Centurion University with an 8.6 CGPA (I memorized the textbooks). I specialize in convincing computers to do what I want using Java, Spring Boot, and React... usually by asking them nicely.",
+  about: "I'm a B.Tech student (2022-2026) at Centurion University with an 8.6 CGPA (I memorized the textbooks). I specialize in convincing computers to do what I want using Java, Spring Boot, and React... usually by asking them nicely.",
   email: "sahdeva403@gmail.com",
   githubUrl: "https://github.com/sahdevgithub403",
   linkedinUrl: "https://linkedin.com/in/sahdev-puran403",
@@ -42,33 +41,34 @@ export const SKILLS = [
     icon: <Terminal size={24} />,
     color: "bg-yellow-300",
   },
-  { name: "Ctrl+C / Ctrl+V", icon: <Cpu size={24} />, color: "bg-purple-300" },
+  { 
+    name: "Ctrl+C / Ctrl+V", 
+    icon: <Cpu size={24} />, 
+    color: "bg-purple-300" 
+  },
 ];
 
 export const PROJECTS = [
   {
+    title: "Shop Management System",
+    description: "A web-based shop management system for managing products and inventory with a responsive user interface.",
+    tags: ["React", "Tailwind CSS", "Spring Boot", "JWT", "WebSocket"],
+    github: "https://github.com/sahdevgithub403/azoov-frontend",
+    color: "bg-lime-200",
+  },
+  {
     title: "Mentoring App",
-    description:
-      "Like Tinder but for finding mentors. 100+ users securely matched. Powered by JWT (Just Working Today).",
-    tags: ["React", "Spring Boot", "MySQL"],
-    github: "https://github.com/sahdevgithub403",
+    description: "A mentor–mentee matching platform that connects users based on skills and interests. Secure authentication implemented using JWT, with 100+ users onboarded.",
+    tags: ["React", "Spring Boot", "MySQL", "JWT"],
+    github: "https://github.com/sahdevgithub403/mentor_frontend",
     color: "bg-pink-200",
   },
   {
-    title: "Shop Mananger",
-    description:
-      "A system that handles money better than I do. ACID compliant, meaning it won't hallucinate your balance.",
-    tags: ["Java", "JDBC", "No Bankruptcy"],
-    github: "https://github.com/sahdevgithub403",
+    title: "Banking System",
+    description: "A core banking system implementing ACID-compliant transactions with secure account handling and reliable balance management.",
+    tags: ["Java", "JDBC", "MySQL", "ACID"],
+    github: "https://github.com/sahdevgithub403/BankingSystem-RGSDSA-Bank",
     color: "bg-cyan-200",
-  },
-  {
-    title: "This Website",
-    description:
-      "Look at it. It's wobbly. It has bugs you can squish. It's basically modern art.",
-    tags: ["React", "Tailwind", "Entropy"],
-    github: "https://github.com/sahdevgithub403",
-    color: "bg-lime-200",
   },
 ];
 
