@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// Scroll Animation Wrapper
 export const ScrollReveal = ({ children, className = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);

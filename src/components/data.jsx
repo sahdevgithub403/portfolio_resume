@@ -3,12 +3,13 @@ import { Coffee, Globe, Zap, Terminal, Cpu } from "lucide-react";
 export const portfolioData = {
   name: "Sahdev Puran",
   realTitle: "(Software Engineer)",
+  
   bio: "I don't always test my code, but when I do, I do it in production. Entry-level dev skilled in turning coffee into syntax errors.",
-  about: "I'm a B.Tech student (2022-2026) at Centurion University with an 8.6 CGPA (I memorized the textbooks). I specialize in convincing computers to do what I want using Java, Spring Boot, and React... usually by asking them nicely.",
+  about: "I’m a B.Tech student at Centurion University, learning and building web applications using Java, Spring Boot, and React. I enjoy solving problems and turning ideas into working software.",
   email: "sahdeva403@gmail.com",
   githubUrl: "https://github.com/sahdevgithub403",
   linkedinUrl: "https://linkedin.com/in/sahdev-puran403",
-  resumeUrl: "#",
+  resumeUrl: "https://drive.google.com/file/d/1OALHIHKUQXPtzSk8bWCCdgyMr0DQw9Kb/view?usp=drive_link",
 };
 
 export const TITLES = [
@@ -54,6 +55,7 @@ export const PROJECTS = [
     description: "A web-based shop management system for managing products and inventory with a responsive user interface.",
     tags: ["React", "Tailwind CSS", "Spring Boot", "JWT", "WebSocket"],
     github: "https://github.com/sahdevgithub403/azoov-frontend",
+    demo: "#",
     color: "bg-lime-200",
   },
   {
@@ -61,20 +63,22 @@ export const PROJECTS = [
     description: "A mentor–mentee matching platform that connects users based on skills and interests. Secure authentication implemented using JWT, with 100+ users onboarded.",
     tags: ["React", "Spring Boot", "MySQL", "JWT"],
     github: "https://github.com/sahdevgithub403/mentor_frontend",
+    demo: "#",
     color: "bg-pink-200",
   },
   {
     title: "Banking System",
     description: "A core banking system implementing ACID-compliant transactions with secure account handling and reliable balance management.",
-    tags: ["Java", "JDBC", "MySQL", "ACID"],
+    tags: ["Java", "JDBC", "MySQL"],
     github: "https://github.com/sahdevgithub403/BankingSystem-RGSDSA-Bank",
+    demo: "#",
     color: "bg-cyan-200",
   },
 ];
 
 export const TIMELINE = [
   {
-    year: "2022",
+    year: "2022 - 2023",
     title: "Started B.Tech",
     desc: "Realized that 'Hello World' is the only code that runs without errors.",
   },
@@ -84,7 +88,7 @@ export const TIMELINE = [
     desc: "System.out.println('Why is this so verbose?');",
   },
   {
-    year: "2025",
+    year: "2025 - 2026",
     title: "Built Full Stack Projects",
     desc: "It actually worked. I was as surprised as you are.",
   },

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Trophy, Bug, Skull, AlertTriangle, RefreshCw, Frown, Activity, ChevronUp, ChevronDown } from 'lucide-react';
 import { TOAST_MESSAGES, EXCUSES } from './data';
 
